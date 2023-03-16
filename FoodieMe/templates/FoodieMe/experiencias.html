@@ -1,0 +1,17 @@
+{% extends "FoodieMe/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<p>Web de experiencias</p>
+{% endblock %}
+
+{% block contenido %}               
+
+    <div class="container">
+        <a class="btn btn-primary" href="{% url 'alta_experiencia' %}">Registrar tu experiencia</a>
+        <a class="btn btn-primary" href="{% url 'leer_experiencias' %}">Consultar experiencias</a>
+    </div>  
+
+{% endblock %}

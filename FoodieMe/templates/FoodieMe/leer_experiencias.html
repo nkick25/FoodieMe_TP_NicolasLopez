@@ -1,0 +1,25 @@
+{% extends "FoodieMe/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<p>Listado de Experiencias</p>
+{% endblock %}
+
+{% block contenido %}               
+
+    {% for exp in Experiencias %}
+    
+    <p>Nombre de Restaurante: {{exp.nombre_restaurante_exp}}</p>
+    <p>Nombre Foodie: {{exp.nombre_foodie}}</p>
+    <p>Apellido Foodie: {{exp.apellido_foodie}}</p>
+    <p>Email Foodie: {{exp.email_foodie}}</p>
+    <p>Calificación Experiencia: {{exp.calificación_experiencia}}</p>
+    <p>Comentarios: {{exp.comentarios_experiencia}}</p>
+    
+    <h2>--------------------------------------------</h2>
+
+    {% endfor %}
+
+{% endblock %}

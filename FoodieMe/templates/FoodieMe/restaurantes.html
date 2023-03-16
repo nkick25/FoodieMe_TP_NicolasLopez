@@ -1,0 +1,16 @@
+{% extends "FoodieMe/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<p>Web de restaurantes</p>
+{% endblock %}
+
+{% block contenido %}               
+    <div class="container">
+        <a class="btn btn-primary" href="{% url 'alta_restaurante' %}">Alta de Restaurantes</a>
+        <a class="btn btn-primary" href="{% url 'leer_restaurantes' %}">Consulta de Restaurantes</a>
+    </div>
+
+{% endblock %}

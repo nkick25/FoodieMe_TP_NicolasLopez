@@ -1,0 +1,34 @@
+{% extends "FoodieMe/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<p>Listado de Restaurantes</p>
+{% endblock %}
+
+{% block contenido %}               
+
+    {% for resto in Restaurantes %}
+    
+    <p>Nombre de Restaurante: {{resto.nombre_restaurante}}</p>
+    <p>Calle: {{resto.direccion_calle}}</p>
+    <p>Altura: {{resto.direccion_altura}}</p>
+    <p>Ciudad: {{resto.direccion_ciudad}}</p>
+    <p>Fecha de Inicio Actividades: {{resto.fecha_inicio_act}}</p>
+    <p>Tipo Restaurante: {{resto.tipo_restaurante}}</p>
+
+    <button>
+        <a href="{% url 'editar_restaurantes' resto.nombre_restaurante %}"> Editar restaurante </a>
+    </button>
+
+    <button>
+        <a href="{% url 'eliminar_restaurantes' resto.nombre_restaurante %}"> Borrar restaurante </a>
+        <strong><h6>Importante! El registro seleccionado se borrará permanentemente de la base</h6></strong>
+    </button>
+    
+    <h2>--------------------------------------------</h2>
+
+    {% endfor %}
+
+{% endblock %}

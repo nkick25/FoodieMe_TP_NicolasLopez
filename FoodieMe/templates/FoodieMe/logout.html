@@ -1,0 +1,14 @@
+{% extends "FoodieMe/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<p> Se ha cerrado tu sesión, gracias por visitarnos! </p> 
+{% endblock %}
+
+{% block contenido %}
+
+<a class="btn btn-primary" href="{% url 'login' %}">Iniciar sesión</a>
+<a class="btn btn-primary" href="{% url 'inicio' %}">Home Page</a>
+
+{% endblock %}

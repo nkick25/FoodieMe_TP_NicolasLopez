@@ -1,0 +1,13 @@
+{% extends "FoodieMe/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<p> {{mensaje2}} </p> 
+{% endblock %}
+
+{% block contenido %}
+
+<a class="btn btn-primary" href="{% url 'login' %}">Reintentar</a>
+
+{% endblock %}

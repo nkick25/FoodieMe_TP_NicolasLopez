@@ -1,0 +1,21 @@
+{% extends "FoodieMe/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<p>Registrar tu experiencia</p>
+{% endblock %}
+
+{% block contenido %}               
+    <form action=""    method="POST"> {% csrf_token %}
+        <table>
+
+        {{form2.as_table}}
+
+        </table>
+
+        <input type = "submit" value="Confirmar">
+    </form>    
+
+{% endblock %}
